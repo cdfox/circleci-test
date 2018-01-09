@@ -22,5 +22,6 @@ jobs:
       - checkout
 
       # specify any bash command here prefixed with `run: `
+      - run: docker ps
       - run: go get -v -t github.com/lib/pq
       - run: go test -v
