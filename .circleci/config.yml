@@ -22,7 +22,5 @@ jobs:
       - checkout
 
       # specify any bash command here prefixed with `run: `
-      # circle_test is dbname for circleci's postgres image
-      #- run: psql -h localhost -p 5432 --dbname=circle_test --file init.sql
       - run: go get -v -t github.com/lib/pq
       - run: go test -v
